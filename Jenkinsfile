@@ -1,4 +1,4 @@
-{
+node {
   stage 'Checkout' {
     steps {
       git url: 'https://github.com/nimahejazi/nodeapp.git'
