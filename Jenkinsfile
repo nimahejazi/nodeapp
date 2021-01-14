@@ -1,15 +1,17 @@
-node {
-  stage 'Checkout' {
+pipeline {
+  agent any
+
+  stage('Checkout') {
     steps {
       git url: 'https://github.com/nimahejazi/nodeapp.git'
     }
   }
-  stage 'Test' {
+  stage('Test') {
     steps {
       sh './test.sh'
     }
   }
-  stage 'Deploy' {
+  stage('Deploy') {
     steps {
       sh './deploy.sh'
     }
