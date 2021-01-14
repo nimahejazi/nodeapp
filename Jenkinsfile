@@ -10,4 +10,4 @@ node {
 
   stage 'Deploy'
   sh './deploy.sh'
-  
+}
