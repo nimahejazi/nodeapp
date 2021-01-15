@@ -14,7 +14,7 @@ pipeline {
         sh 'docker rm nodeapptest || true'
         sh 'docker rmi nodeapptest || true'
         sh 'docker build -t nodeapptest nodeapp'
-        sh 'docker run --rm -ti nodeapptest npm test'
+        sh 'docker run --rm nodeapptest npm test'
       }
     }
     stage('Deploy') {
